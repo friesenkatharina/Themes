@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { ModeToggle } from "./ui/toggle-mode";
-import Link from "next/link";
 
 export default function Nav() {
   return (
@@ -16,8 +15,8 @@ export default function Nav() {
           >
             <Image
               src="/bulb.png"
-              alt="Vercel Logo"
-              className="dark:invert"
+              alt="bulb"
+              className="dark:invert p-4"
               width={100}
               height={24}
               priority
@@ -25,7 +24,7 @@ export default function Nav() {
           </a>
           <ModeToggle />
         </div>
-        <button className="block lg:hidden">
+        <button className="block lg:hidden ">
           <svg
             className="h-6 w-6"
             fill="none"
@@ -41,26 +40,6 @@ export default function Nav() {
             />
           </svg>
         </button>
-        <ul className="hidden lg:flex flex-wrap items-center justify-evenly text-2xl font-bold">
-          <li className="p-2">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="p-2">
-            <Link href="/api/auth/signin">Sign In</Link>
-          </li>
-          <li className="p-2">
-            <Link href="/api/auth/signout">Sign Out</Link>
-          </li>
-          <li className="p-2">
-            <Link href="/server">Server</Link>
-          </li>
-          <li className="p-2">
-            <Link href="/client">Client</Link>
-          </li>
-          <li className="p-2">
-            <Link href="/extra">Extra</Link>
-          </li>
-        </ul>
       </div>
     </nav>
   );
